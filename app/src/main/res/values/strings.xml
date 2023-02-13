@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Fonts For Cricut</string>
+    <string name="fonts_for_cricut">Fonts For Cricut</string>
+    <string name="search_fonts">Search Fonts</string>
+    <string name="image">image</string>
+    <string name="font">Font</string>
+    <string name="mono">Monogram</string>
+    <string name="lobster">Font Applied Text</string>
+    <string name="mo">ABC</string>
+    <string name="setting">Setting</string>
+    <string name="font_name">Font Name</string>
+    <string name="defaultText">Default</string>
+    <string name="uppercase">Uppercase</string>
+    <string name="lowercase">Lowercase</string>
+    <string name="how_to_import_this_font">How to import this font?</string>
+    <string name="install_font">Install Font</string>
+    <string name="mo2">Abs</string>
+    <string name="operation">Operation</string>
+    <string name="cut">Cut</string>
+    <string name="draw">Draw</string>
+    <string name="sign">Size</string>
+    <string name="Size">50</string>
+    <string name="pro">Pro</string>
+    <string name="continue_with_free_plan">Continue With Free Plan</string>
+    <string name="no_commitment">No Commitment. Cancel anytime.</string>
+    <string name="subscription_start">Subscription Start</string>
+    <string name="purchase_start">Purchase</string>
+    <string name="basic">Basic</string>
+
+    <string name="_3_days_trial">Try 3 Days Free Trial</string>
+    <string name="then">Then</string>
+    <string name="year_after">/Year After Trial</string>
+    <string name="prices">Prices</string>
+    <string name="weekly">Weekly</string>
+    <string name="month">Monthly</string>
+    <string name="yearly">Yearly</string>
+    <string name="life_time">Lifetime</string>
+    <string name="_50_noff">50%\nOFF</string>
+    <string name="_82_noff">82%\nOFF</string>
+    <string name="already_subscribed">Already Subscribed</string>
+    <string name="internet_not_connected">Internet not connected.</string>
+
+    <string name="choose_one">Choose One</string>
+    <string name="get_pro">Get Pro</string>
+
+</resources>

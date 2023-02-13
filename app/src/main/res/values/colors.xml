@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#434C78</color>
+    <color name="primaryDarkColor">#434C78</color>
+    <color name="colorAccent">#434C78</color>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="selectionColor">#6EFFDC</color>
+    <color name="shapeColor">#353C5F</color>
+    <color name="textSelection">#434c78</color>
+    <color name="cardColor">#515A88</color>
+
+    <color name="color1">#F44236</color>
+    <color name="color2">#000000</color>
+    <color name="color3">#E71F63</color>
+    <color name="color4">#5A5A5C</color>
+    <color name="color5">#9C28B1</color>
+    <color name="color6">#673BB7</color>
+
+    <color name="transparent">#00000000</color>
+
+    <!-- For settings framework -->
+    <color name="lighter_gray">#ddd</color>
+
+</resources>

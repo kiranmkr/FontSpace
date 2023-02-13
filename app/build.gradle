@@ -1,0 +1,114 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+}
+
+android {
+
+    signingConfigs {
+        config {
+            storeFile file('D:\\otherApp\\FontSpace\\app\\jks\\monogram.jks')
+            keyAlias 'upload'
+            keyPassword 'monogram123'
+            storePassword 'monogram123'
+        }
+        debug {
+            storeFile file('D:\\otherApp\\FontSpace\\app\\jks\\monogram.jks')
+            keyAlias 'upload'
+            keyPassword 'monogram123'
+            storePassword 'monogram123'
+        }
+    }
+
+    compileSdk 32
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.fonts.crafting.stylish.monogram"
+        minSdk 21
+        targetSdk 32
+        versionCode 5
+        versionName "5.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled = true
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    //noinspection GradleDependency
+    implementation "androidx.core:core-ktx:1.7.0"
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    def appcompat_version = "1.5.1"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.appcompat:appcompat-resources:$appcompat_version"
+
+    //noinspection GradleDependency
+    implementation "com.google.android.material:material:1.6.1"
+
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.4"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.0"
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    implementation "com.github.bumptech.glide:glide:4.13.2"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.13.2"
+
+    implementation "com.intuit.sdp:sdp-android:1.1.0"
+
+    // For developers using AndroidX in their applications
+    implementation "pub.devrel:easypermissions:3.0.0"
+
+    //Google Billing
+    //noinspection GradleDependency
+    implementation "com.android.billingclient:billing-ktx:5.0.0"
+
+    implementation 'com.github.santaevpavel:OutlineSpan:0.1.1'
+
+
+}
