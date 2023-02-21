@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryColor"
     tools:context=".ui.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolBarRoot"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
+        android:background="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +20,7 @@
             android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_35sdp"
             android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@color/shapeColor"
+            app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/get_pro"
-                    android:textColor="@color/textColor"
+                    android:textColor="@android:color/black"
                     android:textSize="@dimen/_10sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -57,8 +57,8 @@
 
         <ImageView
             android:id="@+id/btnMenu"
-            android:layout_width="@dimen/_32sdp"
-            android:layout_height="@dimen/_18sdp"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_17sdp"
             android:layout_marginStart="24dp"
             android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toBottomOf="parent"
