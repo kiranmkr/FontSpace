@@ -42,5 +42,15 @@
 
     <string name="choose_one">Choose One</string>
     <string name="get_pro">Get Pro</string>
+    <string name="skip">SKIP</string>
+    <string name="next">Next</string>
+    <string name="find_the_best_fonts_for">Find The Best Fonts For</string>
+    <string name="your">Your</string>
+    <string name="next_craft">Next Craft</string>
+    <string name="find_the_best_monograms">Find The Best Monograms</string>
+    <string name="for_your">For Your</string>
+    <string name="how_our_fonts_or">How Our Fonts Or Monograms Look On Your</string>
+    <string name="craft">Craft</string>
+    <string name="create_stunning_design_crafts_with_our_ncricut_monograms">Create Stunning Design Crafts With Our\nCricut Monograms</string>
 
 </resources>

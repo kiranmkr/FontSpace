@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import com.example.fontsspace.R
-import com.example.fontsspace.databinding.ActivityMainBinding
 import com.example.fontsspace.databinding.StartingScreenBinding
 
 class StartingScreen : AppCompatActivity() {
@@ -23,10 +22,12 @@ class StartingScreen : AppCompatActivity() {
         setContentView(mainBinding.root)
 
         Log.d("myApplication","onCreate SplashScreen")
+
         workerHandler.postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, WalkThroughScreen::class.java))
             finish()
         },1000)
 
     }
+
 }
