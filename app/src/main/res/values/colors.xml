@@ -5,8 +5,10 @@
     <color name="colorAccent">#01A977</color>
 
     <color name="textColor">#FFFFFF</color>
-    <color name="selectionColor">#6EFFDC</color>
-    <color name="shapeColor">#353C5F</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="selectionColor">#01A977</color>
+    <color name="shapeColor">#F8F8F8</color>
     <color name="textSelection">#434c78</color>
     <color name="cardColor">#515A88</color>
 

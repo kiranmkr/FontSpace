@@ -1,6 +1,8 @@
 package com.example.fontsspace.ui
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +10,7 @@ import android.util.Log
 import android.view.View
 import androidx.transition.TransitionManager
 import com.example.fontsspace.databinding.ActivityWalkThroughScreenBinding
+import com.example.fontsspace.other.Utils
 
 class WalkThroughScreen : AppCompatActivity() {
 
@@ -19,16 +22,18 @@ class WalkThroughScreen : AppCompatActivity() {
         mainBinding = ActivityWalkThroughScreenBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        setSharedPreferences(Utils.walkThrough)
+
         mainBinding.tvSkip.setOnClickListener {
             gotoNextScreen()
         }
 
         mainBinding.cardNext.setOnClickListener {
             screenIndex++
-            if (screenIndex == 4){
-                Log.d("myScreenVal","${screenIndex}")
+            if (screenIndex == 4) {
+                Log.d("myScreenVal", "${screenIndex}")
                 gotoNextScreen()
-            }else{
+            } else {
                 gotoNextView()
             }
         }
@@ -40,6 +45,15 @@ class WalkThroughScreen : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun setSharedPreferences(keyShare: String) {
+        val editor: SharedPreferences.Editor = getSharedPreferences(
+            "font",
+            Context.MODE_PRIVATE
+        ).edit()
+        editor.putBoolean(keyShare, false)
+        editor.apply()
     }
 
     private fun gotoNextView() {
@@ -78,7 +92,7 @@ class WalkThroughScreen : AppCompatActivity() {
         }
     }
 
-    private fun gotoNextScreen(){
+    private fun gotoNextScreen() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }

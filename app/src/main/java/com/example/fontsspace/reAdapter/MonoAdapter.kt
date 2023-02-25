@@ -41,13 +41,13 @@ class MonoAdapter(
         if (position > 2) {
             if (GBilling.isSubscribedOrPurchasedSaved) {
                 Log.e("mybp", "buy pro")
-                holder.thumbnailShow.setImageResource(R.drawable.card_next)
+                holder.thumbnailShow.setImageResource(R.drawable.next_icon)
             } else {
                 Log.e("mybp", "not buy pro")
                 holder.thumbnailShow.setImageResource(R.drawable.pro_icon)
             }
         } else {
-            holder.thumbnailShow.setImageResource(R.drawable.card_next)
+            holder.thumbnailShow.setImageResource(R.drawable.next_icon)
         }
 
     }

@@ -57,6 +57,8 @@ object Utils {
 
     var feedBackDetails: String = "Report a Bug"
 
+    var walkThrough: String = "ShowOrNot"
+
     @Suppress("DEPRECATION")
     @JvmField
     val BASE_LOCAL_PATH =

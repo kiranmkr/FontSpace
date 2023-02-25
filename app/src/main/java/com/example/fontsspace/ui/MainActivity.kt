@@ -6,8 +6,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -37,8 +35,6 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
     private var monoNames: ArrayList<String>? = null
     private var fontAdapter: FontAdapter? = null
     private var monoAdapter: MonoAdapter? = null
-
-    private var workerHandler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -99,18 +95,14 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
 
     private fun updateUi() {
 
-        mainBinding.fontCard.setCardBackgroundColor(
-            ContextCompat.getColor(
-                this,
-                R.color.selectionColor
-            )
-        )
+        mainBinding.fontCard.setBackgroundResource(R.drawable.bg_selection)
 
         mainBinding.imgFont.isSelected = true
+
         mainBinding.tvImageFont.setTextColor(
             ContextCompat.getColor(
                 this,
-                R.color.textSelection
+                R.color.white
             )
         )
 
@@ -157,8 +149,7 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
     private fun updateUiClicks() {
 
         mainBinding.btnMenu.setOnClickListener {
-            val intenet = Intent(this, SettingScreen::class.java)
-            startActivity(intenet)
+            startActivity(Intent(this, SettingScreen::class.java))
         }
 
         mainBinding.closeSearch.setOnClickListener {
@@ -177,37 +168,30 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
             hideKeyboardFromView(it)
         }
 
+
         mainBinding.fontCard.setOnClickListener {
 
             showAnimation()
 
-            mainBinding.fontCard.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
+            mainBinding.fontCard.setBackgroundResource(R.drawable.bg_selection)
 
             mainBinding.imgFont.isSelected = true
+
             mainBinding.tvImageFont.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textSelection
+                    R.color.white
                 )
             )
 
-            mainBinding.monoCard.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
+            mainBinding.monoCard.setBackgroundResource(R.drawable.bg_unselection)
 
             mainBinding.imgMono.isSelected = false
+
             mainBinding.tvMono.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textColor
+                    R.color.black
                 )
             )
 
@@ -223,33 +207,25 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
 
             showAnimation()
 
-            mainBinding.fontCard.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
+            mainBinding.fontCard.setBackgroundResource(R.drawable.bg_unselection)
 
             mainBinding.imgFont.isSelected = false
+
             mainBinding.tvImageFont.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textColor
+                    R.color.black
                 )
             )
 
-            mainBinding.monoCard.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
+            mainBinding.monoCard.setBackgroundResource(R.drawable.bg_selection)
 
             mainBinding.imgMono.isSelected = true
+
             mainBinding.tvMono.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textSelection
+                    R.color.white
                 )
             )
 
@@ -275,19 +251,6 @@ class MainActivity : AppCompatActivity(), FontAdapterCallBack {
                 fontFilter(s.toString())
             }
         })
-
-        mainBinding.btnHome.setOnClickListener {
-            Utils.showToast(this, "Already Home Screen")
-        }
-
-        mainBinding.btnSetting.setOnClickListener {
-            val intenet = Intent(this, SettingScreen::class.java)
-            startActivity(intenet)
-        }
-
-        mainBinding.btnLike.setOnClickListener {
-            Utils.showToast(this, "calling like btn")
-        }
 
         mainBinding.goPro.setOnClickListener {
             startActivity(Intent(this@MainActivity, ProScreen::class.java))

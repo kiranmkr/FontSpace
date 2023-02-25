@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainRoot"
+    android:background="@drawable/main_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.WalkThroughScreen">
@@ -41,6 +42,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,6 +71,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
                 android:textAlignment="textStart"
+                android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -149,6 +152,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
                 android:textAlignment="textStart"
+                android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -324,6 +328,7 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
                 android:textAlignment="textStart"
+                android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
