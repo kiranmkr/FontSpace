@@ -56,8 +56,15 @@
     <string name="create_stunning_crafts_with_cricut_fonts">Create Stunning Crafts With Cricut Fonts</string>
     <string name="unlock_premium_features">Unlock Premium Features</string>
     <string name="you_can_buy_any_premium_subscription_and_enjoy_unlimited_fonts_and_monograms">You can buy any premium subscription and enjoy unlimited fonts and monograms</string>
-    <string name="unlock_all_premium_fonts">Unlock all Premium Fonts</string>
-    <string name="unlock_all_premium_monograms">Unlock all Premium Monograms</string>
+    <string name="unlock_all_premium_fonts">Unlock all Premium Fonts.</string>
+    <string name="unlock_all_premium_monograms">Unlock all Premium Monograms.</string>
     <string name="choose_plan">Choose Plan</string>
+    <string name="lite">LITE</string>
+    <string name="golden">GOLDEN</string>
+    <string name="diamond">DIAMOND</string>
+    <string name="per_week">Per Week</string>
+    <string name="per_month">Per Month</string>
+    <string name="per_year">Per Year</string>
+    <string name="life_time_space">Life Time</string>
 
 </resources>
