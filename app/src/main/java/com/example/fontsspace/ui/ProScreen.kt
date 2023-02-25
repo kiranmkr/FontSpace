@@ -38,7 +38,6 @@ class ProScreen : AppCompatActivity() {
         updateBillingData()
     }
 
-
     private fun updateUi() {
 
         bgLayoutButtonBar.add(mainBinding.consWeekly)
@@ -71,6 +70,10 @@ class ProScreen : AppCompatActivity() {
         }
 
         mainBinding.btnBack.setOnClickListener {
+            finish()
+        }
+
+        mainBinding.freePlan.setOnClickListener {
             finish()
         }
 
@@ -493,7 +496,6 @@ class ProScreen : AppCompatActivity() {
             })
 
     }
-
 
     private fun showAnimation() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -31,7 +31,7 @@ class StartingScreen : AppCompatActivity() {
                 finish()
             }
 
-        }, 1000)
+        }, 2000)
 
     }
 

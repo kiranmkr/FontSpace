@@ -1,10 +1,8 @@
 package com.example.fontsspace.ui
 
-import android.app.Dialog
+
 import android.content.ContentValues
-import android.graphics.Color
 import android.graphics.Typeface
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -16,9 +14,9 @@ import android.text.SpannableString
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import android.view.Window
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.example.fontsspace.R
@@ -50,6 +48,8 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
     private var workerHandler = Handler(Looper.getMainLooper())
     private var workerThread: ExecutorService = Executors.newCachedThreadPool()
     private var dialogBinding: DilogSvgLoaderBinding? = null
+
+    private var bgTextFormat: ArrayList<ConstraintLayout> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,6 +103,12 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
     private fun updateUi() {
 
+        mainBinding.tvFontName.text = Utils.fontName
+
+        bgTextFormat.add(mainBinding.defaultCard)
+        bgTextFormat.add(mainBinding.upperCard)
+        bgTextFormat.add(mainBinding.lowerCard)
+
         if (Utils.folderFont) {
             try {
                 mainBinding.tvFontText.typeface =
@@ -130,6 +136,16 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
     }
 
+    private fun alphaManager(views: ArrayList<ConstraintLayout>, view_id: Int) {
+        for (i in views.indices) {
+            if (views[i].id == view_id) {
+                views[i].setBackgroundResource(R.drawable.pro_selection_fil)
+            } else {
+                views[i].setBackgroundResource(android.R.color.transparent)
+            }
+        }
+    }
+
     private fun updateClick() {
 
         mainBinding.btnBack2.setOnClickListener {
@@ -139,99 +155,18 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
         mainBinding.defaultCard.setOnClickListener {
 
-            mainBinding.cardView3.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
-
-            mainBinding.tvDefault.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textSelection
-                )
-            )
-
-
-            mainBinding.cardView4.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvUper.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
-            mainBinding.cardView5.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvLower.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
+            alphaManager(bgTextFormat,it.id)
+            mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.white))
+            mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.black))
+            mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvFontText.text = deafultText
-
-
         }
 
         mainBinding.upperCard.setOnClickListener {
-
-            mainBinding.cardView3.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvDefault.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
-
-            mainBinding.cardView4.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
-
-            mainBinding.tvUper.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textSelection
-                )
-            )
-
-            mainBinding.cardView5.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvLower.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
+            alphaManager(bgTextFormat,it.id)
+            mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.black))
+            mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.white))
+            mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvFontText.let {
                 it.text = it.text.toString().uppercase(Locale.ROOT)
             }
@@ -239,50 +174,10 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         }
 
         mainBinding.lowerCard.setOnClickListener {
-
-            mainBinding.cardView3.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvDefault.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
-
-            mainBinding.cardView4.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
-
-            mainBinding.tvUper.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textColor
-                )
-            )
-
-            mainBinding.cardView5.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
-
-            mainBinding.tvLower.setTextColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.textSelection
-                )
-            )
-
+            alphaManager(bgTextFormat,it.id)
+            mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.black))
+            mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.black))
+            mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.white))
             mainBinding.tvFontText.let {
                 it.text = it.text.toString().lowercase(Locale.ROOT)
             }
@@ -334,31 +229,20 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         mainBinding.conCut.setOnClickListener {
 
             deafualtSelect = true
-            mainBinding.cardView8.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
-                )
-            )
 
+            mainBinding.conCut.setBackgroundResource(R.drawable.bg_selection)
+            mainBinding.conDraw.setBackgroundResource(android.R.color.transparent)
             mainBinding.textView9.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textSelection
-                )
-            )
-
-            mainBinding.cardView7.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
+                    R.color.white
                 )
             )
 
             mainBinding.textView10.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textColor
+                    R.color.black
                 )
             )
 
@@ -367,32 +251,23 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         }
 
         mainBinding.conDraw.setOnClickListener {
+
             deafualtSelect = false
-            mainBinding.cardView8.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.shapeColor
-                )
-            )
+
+            mainBinding.conCut.setBackgroundResource(android.R.color.transparent)
+            mainBinding.conDraw.setBackgroundResource(R.drawable.bg_selection)
 
             mainBinding.textView9.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textColor
-                )
-            )
-
-            mainBinding.cardView7.setCardBackgroundColor(
-                ContextCompat.getColor(
-                    this,
-                    R.color.selectionColor
+                    R.color.black
                 )
             )
 
             mainBinding.textView10.setTextColor(
                 ContextCompat.getColor(
                     this,
-                    R.color.textSelection
+                    R.color.white
                 )
             )
 

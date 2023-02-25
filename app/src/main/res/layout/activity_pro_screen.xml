@@ -143,6 +143,21 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
+            <TextView
+                android:id="@+id/freePlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_black"
+                android:text="@string/continue_with_free_plan"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
