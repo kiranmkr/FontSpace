@@ -13,7 +13,6 @@ import android.widget.TextView
 import com.example.fontsspace.R
 import com.example.fontsspace.billing.GBilling
 import com.example.fontsspace.callBack.FontAdapterCallBack
-import com.example.fontsspace.other.Utils
 import java.io.File
 import java.lang.Exception
 
@@ -52,7 +51,7 @@ class FontAdapter(
                 holder.thumbnailShow.setImageResource(R.drawable.next_icon)
             } else {
                 Log.e("mybp", "not buy pro")
-                holder.thumbnailShow.setImageResource(R.drawable.pro_icon)
+                holder.thumbnailShow.setImageResource(R.drawable.pro_screen_icon)
             }
         } else {
             holder.thumbnailShow.setImageResource(R.drawable.next_icon)

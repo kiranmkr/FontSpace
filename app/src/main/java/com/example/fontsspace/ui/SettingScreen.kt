@@ -74,7 +74,7 @@ class SettingScreen : AppCompatActivity(), PopularClickListener {
             Log.d("myBilling", "billing is buy")
         } else {
             Log.d("myBilling", "billing is not  buy")
-            listItems.add(RecyclerItemsModel(R.drawable.pro_icon, "Go Premium", "premium"))
+            listItems.add(RecyclerItemsModel(R.drawable.pro_screen_icon, "Go Premium", "premium"))
         }
 //        listItems.add(RecyclerItemsModel(R.drawable.restore_icon, "Restore Purchase", "purchase"))
         listItems.add(RecyclerItemsModel(R.drawable.bug_icon, "Report a Bug", "bug"))
@@ -97,7 +97,7 @@ class SettingScreen : AppCompatActivity(), PopularClickListener {
             Log.d("myBilling", "billing is buy")
         } else {
             Log.d("myBilling", "billing is not  buy")
-            listItems.add(RecyclerItemsModel(R.drawable.pro_icon, "Go Premium", "premium"))
+            listItems.add(RecyclerItemsModel(R.drawable.pro_screen_icon, "Go Premium", "premium"))
         }
         listItems.add(RecyclerItemsModel(R.drawable.bug_icon, "Report a Bug", "bug"))
         listItems.add(RecyclerItemsModel(R.drawable.feature_icon, "Request a Feature", "feature"))
