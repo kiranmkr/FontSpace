@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryColor"
     tools:context=".ui.SettingScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolBarRoot"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
+        android:background="@color/primaryColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -31,9 +31,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="@string/setting"
             android:textColor="@color/textColor"
-            android:textSize="@dimen/_25sdp"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

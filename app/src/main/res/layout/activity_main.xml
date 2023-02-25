@@ -18,7 +18,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/goPro"
             android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginEnd="16dp"
             app:cardBackgroundColor="@android:color/white"
             app:cardCornerRadius="@dimen/_5sdp"
@@ -44,8 +44,8 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="@dimen/_28sdp"
-                    android:layout_height="@dimen/_28sdp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_marginStart="8dp"
                     android:contentDescription="@string/image"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -71,6 +71,8 @@
         android:id="@+id/mainRoot"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
