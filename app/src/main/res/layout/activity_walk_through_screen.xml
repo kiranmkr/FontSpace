@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainRoot"
-    android:background="@drawable/main_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
     tools:context=".ui.WalkThroughScreen">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,17 +65,19 @@
 
             <TextView
                 android:id="@+id/textView27"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
                 android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
-                android:textAlignment="textStart"
                 android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView8"
@@ -101,37 +103,6 @@
                 app:layout_constraintStart_toStartOf="@+id/imageView8"
                 app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_black"
-                android:text="@string/your"
-                android:textColor="#111111"
-                android:textSize="@dimen/_21sdp"
-                app:layout_constraintStart_toStartOf="@+id/textView18"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_black"
-                android:text="@string/next_craft"
-                android:textColor="@color/colorAccent"
-                android:textSize="@dimen/_21sdp"
-                app:layout_constraintEnd_toEndOf="@+id/textView18"
-                app:layout_constraintStart_toEndOf="@+id/textView19"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imageView9"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_15sdp"
-                app:layout_constraintEnd_toEndOf="@+id/textView20"
-                app:layout_constraintStart_toStartOf="@+id/textView20"
-                app:layout_constraintTop_toBottomOf="@+id/textView20"
-                app:srcCompat="@drawable/walk_text_bg" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -147,15 +118,18 @@
 
             <TextView
                 android:id="@+id/textView26"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
-                android:textAlignment="textStart"
+                android:gravity="center"
+                android:text="@string/craft_your_masterpiece_with_the_perfect_font_discover_your_style_today"
+
                 android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
@@ -327,15 +301,17 @@
                 app:srcCompat="@drawable/walk_text_bg" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="@string/create_stunning_design_crafts_with_our_ncricut_monograms"
-                android:textAlignment="textStart"
+                android:gravity="center"
+                android:text="@string/create_stunning_designs_on_any_cricut_machine_with_our_versatile_fonts_and_monograms"
                 android:textColor="#111111"
                 android:textSize="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView16" />
         </androidx.constraintlayout.widget.ConstraintLayout>
