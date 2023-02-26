@@ -396,7 +396,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_60sdp"
+                android:layout_height="@dimen/_70sdp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
@@ -415,23 +415,26 @@
                         android:id="@+id/textView11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/sign"
-                        android:textColor="@color/textColor"
+                        android:textColor="@color/black"
                         android:textSize="@dimen/_15sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <SeekBar
+                    <androidx.appcompat.widget.AppCompatSeekBar
                         android:id="@+id/seekBar"
                         style="@style/MySeekBar"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/_25sdp"
+                        android:layout_height="wrap_content"
                         android:progress="50"
+                        android:progressDrawable="@drawable/seekbar_style"
+                        android:splitTrack="false"
                         android:thumb="@drawable/seek_thumb"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/tvSeekSize"
-                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -441,6 +444,7 @@
                         android:text="@string/Size"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

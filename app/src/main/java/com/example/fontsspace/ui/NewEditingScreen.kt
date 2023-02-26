@@ -155,7 +155,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
         mainBinding.defaultCard.setOnClickListener {
 
-            alphaManager(bgTextFormat,it.id)
+            alphaManager(bgTextFormat, it.id)
             mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.white))
             mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.black))
@@ -163,7 +163,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         }
 
         mainBinding.upperCard.setOnClickListener {
-            alphaManager(bgTextFormat,it.id)
+            alphaManager(bgTextFormat, it.id)
             mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.white))
             mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.black))
@@ -174,7 +174,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         }
 
         mainBinding.lowerCard.setOnClickListener {
-            alphaManager(bgTextFormat,it.id)
+            alphaManager(bgTextFormat, it.id)
             mainBinding.tvDefault.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvUper.setTextColor(ContextCompat.getColor(this, R.color.black))
             mainBinding.tvLower.setTextColor(ContextCompat.getColor(this, R.color.white))
@@ -190,7 +190,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
         mainBinding.installFont.setOnClickListener {
 
-            Log.d("myFontFolder","${Utils.getFontFolder(Utils.folderFont)}")
+            Log.d("myFontFolder", "${Utils.getFontFolder(Utils.folderFont)}")
 
             if (EasyPermissions.hasPermissions(
                     this@NewEditingScreen, *Utils.readPermissionPass
@@ -247,6 +247,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
             )
 
             mainBinding.tvFontText.text = deafultText
+            mainBinding.tvFontText.setTextColor(deafultColor)
 
         }
 
@@ -420,7 +421,8 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
             //getting the contentResolver
             applicationContext?.contentResolver?.also { resolver ->
 
-                val dirDest = File(Utils.getRootPath(this, false),Utils.getFontFolder(Utils.folderFont))
+                val dirDest =
+                    File(Utils.getRootPath(this, false), Utils.getFontFolder(Utils.folderFont))
 
                 //Content resolver will process the contentvalues
                 val contentValues = ContentValues().apply {
@@ -446,7 +448,8 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
         } else {
             //These for devices running on android < Q
             //So I don't think an explanation is needed here
-            val dirDest = File(Utils.getRootPath(this, false), "${Utils.getFontFolder(Utils.folderFont)}")
+            val dirDest =
+                File(Utils.getRootPath(this, false), "${Utils.getFontFolder(Utils.folderFont)}")
             if (!dirDest.exists()) {
                 dirDest.mkdirs()
             }
@@ -462,7 +465,8 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
         fos?.use {
             //Finally writing the bitmap to the output stream that we opened
-            val isPut: InputStream = assets.open("${Utils.getFontFolder(Utils.folderFont)}/${Utils.fontName}")
+            val isPut: InputStream =
+                assets.open("${Utils.getFontFolder(Utils.folderFont)}/${Utils.fontName}")
 
             it.write(isPut.readBytes())
 
