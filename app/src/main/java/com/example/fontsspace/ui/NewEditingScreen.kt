@@ -365,6 +365,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
             try {
                 currentEditText.cameraDistance = cmDist
             } catch (ex: IllegalArgumentException) {
+                ex.printStackTrace()
             }
         }
 
@@ -397,16 +398,7 @@ class NewEditingScreen : AppCompatActivity(), EasyPermissions.PermissionCallback
 
     }
 
-    fun fileChecker(path: String?): Boolean {
-        return if (path != null) {
-            val file = File(path)
-            file.exists()
-        } else {
-            false
-        }
-    }
-
-    fun saveMediaToStorage(): String? {
+    private fun saveMediaToStorage(): String? {
 
         var filePath: String? = null
 
